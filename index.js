@@ -148,7 +148,7 @@ client.on('message', (message) => {
         const nada = new Discord.RichEmbed()
             .setAuthor(message.guild, message.author.avatarURL)
             .setTitle(`Olá ${message.author.tag}, posso ajudar ?`)
-            .setDescription("Fui criado em **JS** Por Kauã Tiezzi#1816.\n\n**💡 | Prefixo:**\nMeu prefixo é ``!``\n\n**🤝**")
+            .setDescription("Fui criado em **JS** Por Kauã Tiezzi#1816.\n\n**💡 | Prefixo:**\nMeu prefixo é ``/``\n\n**🤝**")
             .setColor('RANDOM')
             .setThumbnail('')
             .setTimestamp()
@@ -203,7 +203,7 @@ client.on('message', (message) => {
                         .setDescription('*Veja informações sobre outros comandos.*')
                         .addField('📰 | Ticket:', "/ticket ``<motivo>``", true)
                         .addField('🖼 | Sugerir:', "/sugerir ``<@membro>``", true)
-                        .addField('🌍 | denunciar ``<@membro>`` ``<motivo>`` - ``<prova>``')
+                        .addField('🌍 | denunciar ``"/denunciar``<@membro>``<motivo>`` - ``<prova>``", true')
                         .addField('🚩 | Informação:', "/info ", true)
                         .setThumbnail(client.user.avatarURL)
     
