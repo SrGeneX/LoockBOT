@@ -1,1 +1,1 @@
-# LoockBOT
+# inqstore
