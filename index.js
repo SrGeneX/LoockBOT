@@ -31,7 +31,7 @@ var prefix = "/";
 
 client.on("ready", () => {
     
-    client.channels.get('496450533884821515').send(':white_check_mark: | Bot reiniciado com sucesso !\n\nData: ' + hoje).then(msg => {
+    client.channels.get('485504769989935105').send(':white_check_mark: | Bot reiniciado com sucesso !\n\nData: ' + hoje).then(msg => {
         msg.delete(60000)
     })
         
