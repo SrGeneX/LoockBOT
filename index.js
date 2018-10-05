@@ -141,6 +141,25 @@ client.on('message', (message) => {
 
     }
 
+	
+     if(msg.startsWith(prefix + 'AVISO')){
+            
+            message.delete();
+                if(!message.member.roles.find("name", 'Staff')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
+                msg.delete(10000)
+            })
+                  let args1 = message.content.slice(prefix.length + 5).split('/');
+                let embed = new Discord.RichEmbed()
+                .setTitle(`:loudspeaker: InqAvisos - ${hojee}`)
+                .setDescription(args1[0])
+                .setThumbnail('')
+                .setColor('f26363')
+                .setFooter(message.author.username, message.author.avatarURL)
+                 message.channel.send(embed);
+        
+            }
+	
+	
     if(msg.startsWith(prefix + 'AJUDA')){
 
         message.delete();
