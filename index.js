@@ -150,7 +150,7 @@ client.on('message', (message) => {
             })
                   let args1 = message.content.slice(prefix.length + 5).split('/');
                 let embed = new Discord.RichEmbed()
-                .setTitle(`:loudspeaker: InqAvisos - ${hojee}`)
+                .setTitle(`:loudspeaker: LoockAvisos - ${hojee}`)
                 .setDescription(args1[0])
                 .setThumbnail('')
                 .setColor('f26363')
