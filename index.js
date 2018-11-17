@@ -38,7 +38,7 @@ client.on("ready", () => {
     const activities = ['Loja.Loockcraft.com', 'Acesse nosso servidor', 'Loockcraft.com']
     let counter = 0
     setInterval(function() {
-        client.user.setGame(activities[counter], "https://twitch.tv/kaua__gamer")
+        client.user.setGame(activities[counter], "https://twitch.tv/mygenex")
         counter+= 1
         counter %= activities.length
     }, 10000)
