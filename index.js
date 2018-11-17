@@ -31,14 +31,14 @@ var prefix = "/";
 
 client.on("ready", () => {
     
-    client.channels.get('485504769989935105').send(':white_check_mark: | Bot reiniciado com sucesso !\n\nData: ' + hoje).then(msg => {
+    client.channels.get('48550476998993515').send(':white_check_mark: | Bot reiniciado com sucesso !\n\nData: ' + hoje).then(msg => {
         msg.delete(60000)
     })
         
-    const activities = ['Loja.Loockcraft.com', 'Acesse nosso servidor', 'Loockcraft.com']
+    const activities = [Loja.Lkcraft.com', 'Acesse nosso servidor', 'Loockcraft.com']
     let counter = 0
     setInterval(function() {
-        client.user.setGame(activities[counter], "https://twitch.tv/mygenex")
+        client.user.setGme(activities[counter], "https://twitch.t/mygenex")
         counter+= 1
         counter %= activities.length
     }, 10000)
@@ -47,7 +47,7 @@ client.on("ready", () => {
 client.on('message', (message) => {
     
     let msg = message.content.toUpperCase();
-    let sender = message.author;
+    let sende= message.author;
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
     
@@ -61,7 +61,7 @@ client.on('message', (message) => {
 
         let sugerindo = args.slice(0).join(" ");
 
-        const erd = new Discord.RichEmbed()
+        const erd = neDiscord.RichEmbed()
             .setAuthor(message.author.tag, message.author.avatarURL)
             .setColor('RANDOM')
             .setTimestamp()
@@ -81,7 +81,7 @@ client.on('message', (message) => {
             .addField('📝 | Sugestão:', sugerindo )
             .addField('<:rotating_light:452700782001913867> | Autor:', message.author, true)
         client.channels.get('496511444477542411').send(embed).then(msg => {
-            msg.react('👍');
+            msg.reat('👍');
             msg.react('👎');
         });
 
@@ -110,7 +110,7 @@ client.on('message', (message) => {
             msg.react('🛡');
         });
 
-        if(!motivo) return message.channel.send(erd).then(msg => {
+        if(!motivo) return messag.channel.send(erd).then(msg => {
             msg.delete(20000);
             msg.react('🛡');
         });
@@ -125,14 +125,14 @@ client.on('message', (message) => {
             .setTitle('🛡 Denúncia')
             .setDescription('Nova denúncia criada.')
             .addField('<:e_mail:457899299213279243> | Acusado:', user, true)
-            .addField('<:flag_pm:457899299376726016> | Autor:', message.author, true)
+            .addFeld('<:flag_pm:457899299376726016> | Autor:', message.author, true)
             .addField('💬 | Canal:', message.channel, true)
             .addField('📝 | Motivo:', motivo[0], true)
-            .addField('🖼 | Prova:', motivo[1], true)
+            .addFeld(🖼 | Prova:', motivo[1], true)
             .setThumbnail(client.user.avatarURL)
         client.channels.get('496518957394558976').send(reportado).then(msg => {
             msg.react('✅');
-            msg.react('❌');
+            msg.react('❌')
         });
 
         message.reply('🛡 | Sua denúncia foi enviada com sucesso, agradecemos pela sua denúncia!').then(msg => {
@@ -152,7 +152,7 @@ client.on('message', (message) => {
                 let embed = new Discord.RichEmbed()
                 .setTitle(`:loudspeaker: LoockAvisos - ${hojee}`)
                 .setDescription(args1[0])
-                .setThumbnail('')
+                .setThmbnail(''
                 .setColor('f26363')
                 .setFooter(message.author.username, message.author.avatarURL)
                  message.channel.send(embed);
@@ -177,7 +177,7 @@ client.on('message', (message) => {
         });
     
         const depois = new Discord.RichEmbed()
-            .setAuthor('Lista disponível:', client.user.avatarURL)
+            .setAuthor('Lista disponível:', clent.user.avatarURL)
             .setDescription("**👮 Administração** - *(Veja sobre comandos de administração.)*\n\n**💡 Outros** - *(Veja sobre outros comandos.)*")
             .setColor('RANDOM')
             .setTimestamp()
@@ -193,7 +193,7 @@ client.on('message', (message) => {
     
                 mda.on('collect', r => {
     
-                    const comandinhos = new Discord.RichEmbed()
+                    const comandinhos = new Disord.RichEmbed()
                         .setTitle('<:flag_pm:457899299376726016> Administração')
                         .setColor('d83f31')
                         .setDescription('*Veja informações sobre os comandos de administração.*')
@@ -216,7 +216,7 @@ client.on('message', (message) => {
     
                 dmc.on('collect', r => {
     
-                    const comandinhos = new Discord.RichEmbed()
+                    const comandinhos= new Discord.RichEmbed()
                         .setTitle('<:fire:457899300320444426> Outros')
                         .setColor('efd94a')
                         .setDescription('*Veja informações sobre outros comandos.*')
@@ -247,7 +247,7 @@ client.on('message', (message) => {
         var IP = 'loockcraft.com';
         var Porta = '25577';
         message.delete();
-        var url = 'http://mcapi.us/server/status?ip=' + IP + '&port=' + Porta;
+        vaurl = 'http://mcapi.us/servstatus?ip=' + IP + '&port=' + Porta;
         request(url, function(err, response, body) {
 		
             if(err){
@@ -269,7 +269,7 @@ client.on('message', (message) => {
 		        msg.delete(20000)
 		    })
                 }else{
-	            let embed = new Discord.RichEmbed()
+	            t embed = new Discord.RichEmbed()
 	                .setTitle('📢 LoockStatus 📢')
                         .setDescription('Informações sobre nosso server !')
                         .addField(':x: | Conexão: ', 'Rede em Manutenção !')
@@ -302,7 +302,7 @@ client.on('message', (message) => {
             .setColor('RANDOM')
             .setFooter('Suporte', client.user.avatarURL)
 
-        if(!motivo) return message.channel.send(mto).then(msg => {
+        if(!motivo) rern message.channel.send(mto).then(msg => {
             msg.delete(20000)
         })
 
@@ -329,7 +329,7 @@ client.on('message', (message) => {
             });
 
             c.overwritePermissions(role2, {
-                SEND_MESSAGES: false,
+                SEND_MESSAS: false,
                 READ_MESSAGES: false
             });
 
@@ -366,7 +366,7 @@ client.on('message', (message) => {
             msg.delete(10000);
         });
 
-        const embed = new Discord.RichEmbed()
+        const embed w Discord.RichEmbed()
             .setAuthor(message.author.tag, message.author.avatarURL)
             .setDescription("*Você realmente deseja fechar esse ticket ?*\n🚪 | **Fechar:**\nCaso queira fechar basta usar: ``!confirmar``\n🕐 | Você possui 10 segundos para fechar, ou será cancelado ! \n\n :thumbsup:\n")
             .setFooter(message.channel.name, client.user.avatarURL)
@@ -393,4 +393,4 @@ client.on('message', (message) => {
 });
 
 
-    client.login(process.env.token);;
+    clientlogin(process.env.toke);
